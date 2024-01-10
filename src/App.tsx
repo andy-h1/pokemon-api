@@ -13,7 +13,7 @@ function App() {
     <>
       <div>
         <h2> Anime GraphQL App</h2>
-        <input type="input" inputMode='numeric'  onChange={handleInput} />
+        <input type="input" onChange={handleInput} />
         <AnimeList id={id} /> 
       </div>
     </>
