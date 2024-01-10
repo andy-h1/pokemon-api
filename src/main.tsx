@@ -5,9 +5,11 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import './index.css'
 
 const client = new ApolloClient({
-  uri: 'https://beta.pokeapi.co/graphql/v1beta/',
+  uri: 'https://graphql.anilist.co',
   cache: new InMemoryCache(),
 })
+
+
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
