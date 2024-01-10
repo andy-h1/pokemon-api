@@ -3,7 +3,7 @@ import { useQuery, gql } from "@apollo/client";
 const GET_ANIME = gql `
     query GetAnime ($id: Int) {
         Media (id: $id, type: ANIME ) {
-            id 
+            id
             title {
                 english
             }
@@ -13,7 +13,7 @@ const GET_ANIME = gql `
 `
 
 type AnimeListProp = {
-    id: number
+    id?: number
 }
 
 // const id = 223
@@ -21,7 +21,7 @@ type AnimeListProp = {
 //223
 
 export const AnimeList: React.FC<AnimeListProp> = (id) => {
-    const {loading, error, data} = useQuery(GET_ANIME, {variables: id, pollInterval: 500});
+    const {loading, error, data} = useQuery(GET_ANIME, {variables: id});
 
     if(loading) return <p>Loading...</p>
     if(error) return <p>Error: {error.message}</p>

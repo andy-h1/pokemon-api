@@ -1,6 +1,6 @@
 import {HttpResponse, graphql} from 'msw';
 
-const mockAnimeResponse = {
+export const mockAnimeResponse = {
     id: 1,
     title: {
         english: "Cowboy Bepop"
